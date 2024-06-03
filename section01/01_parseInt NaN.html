@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrap"></div>
+  <script>
+    console.log()
+    let wrap = document.querySelector('.wrap');
+    
+    function testText(text) {
+      wrap.innerHTML += `${text} <br> <br>`
+    }
+    testText(-2)
+    testText(5e5)
+    testText(5e-4)
+    testText('123' + 5)
+    testText(123 + 5)
+    testText(parseInt('123') + 5)
+    testText(Number('123') + 5)
+    testText(typeof parseInt('123'))
+    testText(parseInt(3.14)) // 정수로 바꿈
+    testText(parseFloat(3.14)) // 소수로 바꿈
+    testText(Number(3.14)) // 정수, 소수로 알아서 바꿔줌
+    testText(parseInt('3월'))
+    testText(parseFloat('3월'))
+    testText(Number('3월'))
+    testText('123123123'.substr(0, 2))
+    testText('123123123'.substring(0, 2))
+    testText(3*2)
+    testText(3**3)
+    testText(Infinity)
+    testText(typeof Infinity)
+    testText(0 / 0)
+    // testText(parseInt(prompt()))
+    // testText(typeof parseInt(prompt()))
+  </script>
+</body>
+</html>
